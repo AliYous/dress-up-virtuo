@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <title>CSS/HTML Workshop with govirtuo.com</title>
+    <link rel="stylesheet" href="styles.css"/>
   </head>
   <body>
-    <div class="container d-flex">
-      <div class="row">
-        <h2> Compute Payment </h2>
-      </div>
-      <div id="car">
-        <label>Car Name</label>
-        <input class="js-name form-control bottom-1" type="text" placeholder="Car name"/>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> RentalCash</a>
+            </div>
+    </nav>
 
-        <label>Price per day</label>
-        <input class="js-price-by-day form-control bottom-1" type="number" placeholder="Price by day"/>
+    <section id="last">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="margin-top-0 wow fadeIn">Compute your cashflow</h2>
+                    <hr class="primary">
+                    <p>With this tool, you can finally know EXACTLY how much money you make each time a car is rented.</p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <form class="contact-form row">
+                        <div id="car">
+                            <div class="col-md-4">
+                                <label></label>
+                                <input class="js-name form-control bottom-1" type="text" placeholder="Car Name"/>
+                            </div>
+                            <div class="col-md-4">
+                                <label></label>
+                                <input class="js-name form-control bottom-1" type="text" placeholder="Driver name"/>
+                            </div>
+                            <div class="col-md-2">
+                                <label></label>
+                                <input class="js-price-by-day form-control bottom-1" type="number" placeholder="Price by day"/>
+                            </div>
+                            <div class="col-md-2">
+                                <label></label>
+                                <input class="js-price-by-km form-control bottom-1" type="number" placeholder="Price by km"/>
+                            </div>
+                        </div>
 
-        <label>Price per km</label>
-        <input class="js-price-by-km form-control bottom-1" type="number" placeholder="Price by km"/>
-      </div>
+                        <div id="rental">
+                            <div class="col-md-6">
+                                <label></label>
+                                <input class="js-begin form-control bottom-1" type="date" placeholder="Rental begin date"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label></label>
+                                <input class="js-end form-control bottom-1" type="date" placeholder="Rental end date"/>
+                            </div>
+                            <div class="col-md-12">
+                                <label></label>
+                                <input class="js-distance form-control bottom-1" type="number" placeholder="Distance in km"/>
+                            </div>
+                            
+                            <input class="js-option bottom-1" type="checkbox" placeholder="Deductible option"/>
 
-      <div id="rental">
-        <label>Driver's Name</label>
-        <input class="js-name form-control bottom-1" type="text" placeholder="Driver name"/>
-        
-        <label>Pick-up Date</label>
-        <input class="js-begin form-control bottom-1" type="date" placeholder="Rental begin date"/>
+                        </div>
 
-        <label>Return Date</label>
-        <input class="js-end form-control bottom-1" type="date" placeholder="Rental end date"/>
 
-        <label>Distance</label>
-        <input class="js-distance form-control bottom-1" type="number" placeholder="Distance in km"/>
+                        <div class="col-md-4">
+                            <label></label>
+                            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg" id="compute">Compute<i class="ion-android-arrow-forward"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
-        <input class="js-option bottom-1" type="checkbox" placeholder="Deductible option"/>
-        <hr>
-        <button class="btn btn-primary align-center" id="compute">Compute</button>
-
-      </div>
-      <div id="actors"></div>
-
-    </div>
     <script src="virtuo.js"></script>
     <script src="index.js"></script>
-  </body> 
+  </body>
 </html>
